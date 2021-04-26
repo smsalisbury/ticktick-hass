@@ -1,0 +1,158 @@
+# Task services
+create_task:
+  name: Create task
+  description: Create a new task in TickTick
+  fields:
+    name:
+      name: Name
+      description: The name of the task
+      required: true
+      example: Pick up the dry cleaning
+      selector:
+        text:
+    due:
+      name: Due date
+      description: When the task is due
+      selector:
+        text:
+    start:
+      name: Start date
+      description: When the task starts
+      advanced: true
+      selector:
+        text:
+    end:
+      name: End date
+      description: When the task ends
+      advanced: true
+      selector:
+        text:
+    priority:
+      name: Priority
+      description: The priority of the task
+      default: "none"
+      selector:
+        select:
+          options:
+            - "none"
+            - "low"
+            - "medium"
+            - "high"
+    project:
+      name: Project
+      description: The ID of the project you want to create the task in
+      selector:
+        text:
+    tags:
+      name: Tags
+      description: A list of tags to add to the task
+      advanced: true
+      selector:
+        object:
+    content:
+      name: Content
+      description: The body text for the task
+      advanced: true
+      selector:
+        text:
+delete_task:
+  name: Delete task
+  description: Delete a task in TickTick
+  fields:
+    task_id:
+      name: Task ID
+      description: The ID of the task to delete
+      required: true
+      selector:
+        text:
+list_project_tasks:
+  name: List tasks in project
+  description: Retreive a list of tasks in a given TickTick project
+  fields:
+    project_id:
+      name: Project ID
+      description: The ID of the project to get the tasks of
+      required: true
+      selector:
+        text:
+mark_task_as_complete:
+  name: Complete task
+  description: Mark a task as complete in TickTick
+  fields:
+    task_id:
+      name: Task ID
+      description: The ID of the task to mark as complete
+      required: true
+      selector:
+        text:
+move_task:
+  name: Move task
+  description: Move a given task to a new project in TickTick
+  fields:
+    task_id:
+      name: Task ID
+      description: The ID of the task to mark as complete
+      required: true
+      selector:
+        text:
+    project_id:
+      name: Project ID
+      description: The ID of the project to move the task to
+      required: true
+      selector:
+        text:
+update_task:
+  name: Update task
+  description: Update an existing TickTick task
+  fields:
+    task_id:
+      name: Task ID
+      description: The ID of the task to update
+      required: true
+      selector:
+        text:
+    name:
+      name: Name
+      description: The name of the task
+      example: Pick up the dry cleaning
+      selector:
+        text:
+    due:
+      name: Due date
+      description: When the task is due
+      selector:
+        text:
+    start:
+      name: Start date
+      description: When the task starts
+      advanced: true
+      selector:
+        text:
+    end:
+      name: Due date
+      description: When the task is due
+      selector:
+        text:
+    priority:
+      name: Priority
+      description: The priority of the task
+      default: "none"
+      selector:
+        select:
+          options:
+            - "none"
+            - "low"
+            - "medium"
+            - "high"
+    tags:
+      name: Tags
+      description: A tag or comma-separated list of tags to add to the task
+      advanced: true
+      selector:
+        object:
+    content:
+      name: Content
+      description: The body text for the task
+      advanced: true
+      selector:
+        text:

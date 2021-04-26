@@ -1,0 +1,17 @@
+{
+	"domain": "ticktick",
+	"name": "TickTick",
+	"version": "0.1.0",
+	"config_flow": true,
+	"documentation": "https://github.com/smsalisbury/ha-ticktick",
+	"requirements": [
+	  "ticktick-py==1.0.0"
+	],
+	"ssdp": [],
+	"zeroconf": [],
+	"homekit": {},
+	"dependencies": [],
+	"codeowners": [
+	  "@smsalisbury"
+	]
+  }
